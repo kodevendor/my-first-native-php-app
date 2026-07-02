@@ -17,7 +17,7 @@
         id="settings"
         icon="settings"
         label="Settings"
-        url="https://yourapp.com/my-account"
+        url="{{ route('mobile.settings') }}"
     />
 </native:top-bar>
 
@@ -32,7 +32,7 @@
         id="home"
         label="Home"
         icon="home"
-        url="/home"
+        url="{{ route('mobile.home') }}"
         :active="true"
     />
 
@@ -41,24 +41,23 @@
             id="profile"
             label="Profile"
             icon="person"
-            url="/profile"
+            url="{{ route('mobile.profile') }}"
         />
         <native:side-nav-item
             id="settings"
             label="Settings"
             icon="settings"
-            url="/settings"
+            url="{{ route('mobile.settings') }}"
         />
     </native:side-nav-group>
 
     <native:horizontal-divider />
 
     <native:side-nav-item
-        id="help"
-        label="Help"
-        icon="help"
-        url="https://help.example.com"
-        open-in-browser="true"
+        id="logout"
+        label="Logout"
+        icon="logout"
+        url="{{ route('logout') }}"
     />
 </native:side-nav>
 
@@ -69,14 +68,14 @@
         id="home"
         icon="home"
         label="Home"
-        url="/"
+        url="{{ route('mobile.home') }}"
         :active="true"
     />
     <native:bottom-nav-item
         id="profile"
         icon="person"
         label="Profile"
-        url="/profile"
+        url="{{ route('mobile.profile') }}"
         badge="3"
     />
 </native:bottom-nav>
